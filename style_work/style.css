@@ -1,0 +1,32 @@
+body{
+    background-color: darksalmon;
+}
+.container{
+    background-color: aqua;
+    border: 2px solid red;
+    height: 400px;
+    padding: 20px;
+    box-sizing: content-box;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row-reverse;
+}
+.child1,.child2,.child3,.child3, .child4{
+    background-color:cadetblue;
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+    margin: 20px;
+}
+.child1{
+
+}
+.child2{
+    background-color:chocolate ;
+}
+.child3{
+    background-color: blue;
+}
+.child4{
+    background-color: green;
+}
