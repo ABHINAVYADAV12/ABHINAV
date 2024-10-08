@@ -1,7 +1,8 @@
-body{
+body {
     background-color: darksalmon;
 }
-.container{
+
+.container {
     background-color: aqua;
     border: 2px solid red;
     height: 400px;
@@ -9,24 +10,33 @@ body{
     box-sizing: content-box;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row; 
     flex-flow: row-reverse;
+    justify-content: space-evenly; 
+    align-items: center;
+
 }
-.child1,.child2,.child3,.child3, .child4{
-    background-color:cadetblue;
+
+.child1, .child2, .child3, .child4 {
+    background-color: cadetblue;
     height: 200px;
     width: 200px;
     display: inline-block;
     margin: 20px;
 }
-.child1{
+.child1 {
+    background-color: brown;
+    flex-basis:500px  
+}
 
+.child2 {
+    background-color: chocolate;
 }
-.child2{
-    background-color:chocolate ;
-}
-.child3{
+
+.child3 {
     background-color: blue;
 }
-.child4{
+
+.child4 {
     background-color: green;
 }
