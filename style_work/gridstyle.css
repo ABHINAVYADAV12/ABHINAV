@@ -13,9 +13,10 @@ body {
 .row1, .row2, .row3, .row4 {
     border: 1px solid transparent;
 }
+
 .row1 {
     grid-column: 1 / 13;
-    background-color: #232F3E; 
+    background-color: #232F3E;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -28,9 +29,10 @@ body {
     text-align: center;
     padding: 0 15px;
 }
+
 .row2 {
     grid-column: 1 / 13;
-    background-color: #37475A; 
+    background-color: #37475A;
     color: white;
     height: 70px;
 }
@@ -52,9 +54,10 @@ ul li {
 }
 
 ul li:hover {
-    background-color: #232F3E; 
+    background-color: #232F3E;
     border-radius: 4px;
 }
+
 .row3 {
     grid-column: 1 / 13;
     text-align: center;
@@ -67,3 +70,48 @@ ul li:hover {
     height: auto;
 }
 
+.row4 {
+    grid-column: 1 / 13;
+    height: 400px;
+    background-color: grey;
+    display: flex;
+    grid-template-columns: repeat(4, 1fr); /* Adjust this as needed */
+    border: 2px solid gold;
+    gap: 10px;
+    padding: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.row41, .row42, .row43, .row44 {
+    width: 200px;
+    height: 300px;
+    border: 1px solid red;
+    background-color: white;
+}
+
+.row41 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5px;
+}
+
+.row411 {
+    border: 1px solid yellowgreen;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.row412 {
+
+}
+
+.row413 {
+    
+}
+
+.row414 {
+    
+}
