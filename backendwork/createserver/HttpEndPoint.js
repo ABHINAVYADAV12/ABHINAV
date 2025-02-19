@@ -1,20 +1,24 @@
-const http=require('http')
-const { data } = require('react-router-dom')
-// exchage data from client to server
-const PORT=2500
-const server=http.createServer((req,res)=>{
-  res.write("Welcome to node js server")
-//   console.log(Object.keys(req))
-  console.log(req.method+req.url)
-  
-  if(req.url=="/data" && req.method=="GET"){
-    res.end("HI I am at end point")
-  }
-  if(req.url=="/msg" && req.method=="POST"){
-    res.end("HI I am at end point")
-  }
-  })
-server.listen(PORT,()=>{
-   console.log(PORT)
+const fs=require('fs').promises;
+const http=require('http');
+const PORT=2500;
+const server=http.createServer(async(req,res)=>{
+    res.setHeader("Content-Type","text/html")
+    const err=await fs.readFile('abc.html',{encoding:'utf-8'});
+    if(req.url=='/data' && req.method=='GET'){
+        res.end("<h2>Hi endpoint available</h2>")
+    }
+    else if(req.url=='/welcome' && req.method=='GET'){
+        res.end("<h2>Welcome to abes</h2>")
+    }
+    // else if(req.url=='/msg' && req.method=='POST'){
+    //     res.end("<h2>Hi post endpoint available</h2>")
+    // }
+    else{
+        res.end(err)
+    }
+    // res.end("Server response has completed")
 })
-// default method of http get
+
+server.listen(`${PORT}`,()=>{
+    console.log("server is running on :"+2500)
+})
